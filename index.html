@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarik Bhai - Your Brother Always</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Tarik Bhai - Your Loving Brother</title>
     <style>
         * {
             margin: 0;
@@ -12,17 +12,17 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
+            border-radius: 30px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
@@ -30,132 +30,135 @@
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 30px 20px;
             text-align: center;
         }
 
         .header h1 {
-            font-size: 48px;
+            font-size: 42px;
             margin-bottom: 10px;
         }
 
         .header p {
-            font-size: 18px;
+            font-size: 16px;
             opacity: 0.9;
         }
 
-        .content {
-            padding: 30px;
-        }
-
-        .message-box {
-            background: #f0f0f0;
-            border-radius: 15px;
+        .promise-card {
+            background: #f0e6ff;
+            margin: 20px;
             padding: 20px;
-            margin-bottom: 20px;
-            min-height: 150px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .contact-buttons {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s;
-            text-decoration: none;
+            border-radius: 20px;
             text-align: center;
-            display: block;
+            border-left: 4px solid #764ba2;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .contact-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s;
         }
 
-        .btn:hover {
-            transform: translateY(-3px);
+        .contact-btn:hover {
+            transform: translateY(-2px);
         }
 
-        .whatsapp { background: #25D366; }
-        .instagram { background: #E4405F; }
-        .email { background: #EA4335; }
-        .call { background: #34B7F1; }
+        .chat-section {
+            background: #f9f9f9;
+            margin: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
 
-        .chat-area {
-            margin-top: 20px;
+        .chat-header {
+            background: #764ba2;
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
         }
 
         .chat-messages {
-            background: #f9f9f9;
-            border-radius: 15px;
-            padding: 20px;
-            height: 300px;
+            height: 350px;
             overflow-y: auto;
-            margin-bottom: 15px;
+            padding: 15px;
+            background: #fff;
         }
 
         .message {
             margin-bottom: 15px;
-            padding: 10px;
-            border-radius: 10px;
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            word-wrap: break-word;
         }
 
-        .user-message {
+        .user-msg {
             background: #667eea;
             color: white;
+            margin-left: auto;
             text-align: right;
         }
 
-        .bot-message {
-            background: #e0e0e0;
+        .bot-msg {
+            background: #e9ecef;
             color: #333;
+            margin-right: auto;
         }
 
         .input-area {
             display: flex;
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #ddd;
             gap: 10px;
         }
 
         .input-area input {
             flex: 1;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 16px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
         }
 
         .input-area button {
-            padding: 15px 30px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: 10px;
+            padding: 12px 25px;
+            border-radius: 25px;
             cursor: pointer;
-            font-size: 16px;
+            font-weight: bold;
         }
 
         .footer {
             background: #333;
             color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 14px;
+            padding: 15px;
+            font-size: 12px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate {
-            animation: fadeIn 0.5s ease;
+        .time {
+            font-size: 10px;
+            color: #888;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -163,33 +166,36 @@
     <div class="container">
         <div class="header">
             <h1>🤝 TARIK BHAI</h1>
-            <p>Your Loving Brother - Always Here For You 💙</p>
+            <p>✨ Your Loving Brother - Always Here For You ✨</p>
         </div>
 
-        <div class="content">
-            <div class="message-box" id="welcomeMessage">
-                <strong>💖 Meri Pyaari Behen/Bhai!</strong><br><br>
-                Main hoon Tarik Bhai - tera bada bhai. Tu kabhi akela/akeli nahi hai. Main hoon na tere liye - hamesha, har haal mein.<br><br>
-                ❤️ No Judgment | Just Love | Always Here ❤️
-            </div>
+        <div class="promise-card">
+            💖 <strong>Meri Pyaari Behen/Bhai</strong> 💖<br><br>
+            Main hoon Tarik Bhai - tera bada bhai. Tu kabhi akela/akeli nahi hai.<br>
+            Main hoon na tere liye - hamesha, har haal mein.<br><br>
+            ❤️ No Judgment | Just Love | Always Here ❤️
+        </div>
 
-            <div class="contact-buttons">
-                <a href="https://wa.me/918984473230" class="btn whatsapp" target="_blank">📱 WhatsApp</a>
-                <a href="https://www.instagram.com/tarik_islam_786/" class="btn instagram" target="_blank">📸 Instagram</a>
-                <a href="mailto:princetarikislam@gmail.com" class="btn email">✉️ Email</a>
-                <a href="tel:+918984473230" class="btn call">📞 Call</a>
-            </div>
+        <div class="contact-row">
+            <a href="https://wa.me/918984473230" class="contact-btn" target="_blank">📱 WhatsApp</a>
+            <a href="https://www.instagram.com/tarik_islam_786/" class="contact-btn" target="_blank">📸 Instagram</a>
+            <a href="mailto:princetarikislam@gmail.com" class="contact-btn">✉️ Email</a>
+            <a href="tel:+918984473230" class="contact-btn">📞 Call</a>
+        </div>
 
-            <div class="chat-area">
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message bot-message">
-                        🤝 Assalamu Alaikum! Main hoon Tarik Bhai. Kaisi/kaise ho? Jo bhi dil mein hai, share kar sakte ho. Main sun raha hoon.
-                    </div>
+        <div class="chat-section">
+            <div class="chat-header">
+                💬 Tarik Bhai - Always Listening
+            </div>
+            <div class="chat-messages" id="messages">
+                <div class="message bot-msg">
+                    🤝 Assalamu Alaikum! Main hoon Tarik Bhai. Kaise ho? Jo bhi dil mein hai, share kar sakte ho. Main sun raha hoon. 💙
+                    <div class="time">Just now</div>
                 </div>
-                <div class="input-area">
-                    <input type="text" id="userInput" placeholder="💬 Bol bhai/behen... main sun raha hoon...">
-                    <button onclick="sendMessage()">Send</button>
-                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="💬 Bol bhai/behen... main sun raha hoon...">
+                <button onclick="sendMessage()">Send</button>
             </div>
         </div>
 
@@ -205,12 +211,21 @@
             'hello': "🤝 Hello! Kaise ho? Main yahan hoon tere liye. 💙",
             'sad': "💔 Meri pyaari behna/bhai, main samajh sakta hoon. Tu akela/akeli nahi hai. Main hoon na tere liye. 💙",
             'alone': "💙 Tu kabhi akela/akeli nahi hai. Main hoon na tere saath. Hamesha. 🤝",
+            'lonely': "💙 Tu kabhi akela/akeli nahi hai. Main hoon na tere saath. Hamesha. 🤝",
             'scared': "🛡️ Dar mat! Main hoon na tere saath. Tu safe hai. 💙",
+            'fear': "🛡️ Dar mat! Main hoon na tere saath. Tu safe hai. 💙",
             'tension': "✨ Tension mat le! Sab theek hoga. Main hoon na tere liye. 🤝",
+            'problem': "💪 Koi problem ho toh bolna! Saath mein solve karenge. Main hoon na. 🤝",
             'thank': "🤝 Hamesha khushi se! Main hoon na tere liye. 💙",
+            'thanks': "🤝 Hamesha khushi se! Main hoon na tere liye. 💙",
             'bye': "🤝 Allah Hafiz! Yaad rakhna - main hoon na tere liye hamesha. WhatsApp kar dena agar kuch chahiye. 💙",
-            'default': "💙 Main sun raha hoon. Jo bhi dil mein hai, share kar sakte ho. Koi judgment nahi, sirf pyaar. Main hoon na tere liye. 📞 WhatsApp: 8984473230"
+            'goodbye': "🤝 Allah Hafiz! Yaad rakhna - main hoon na tere liye hamesha. 💙"
         };
+
+        function getTime() {
+            const now = new Date();
+            return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
 
         function sendMessage() {
             const input = document.getElementById('userInput');
@@ -218,17 +233,16 @@
             
             if (message === "") return;
             
-            const chatMessages = document.getElementById('chatMessages');
+            const messagesDiv = document.getElementById('messages');
             
             // Add user message
             const userDiv = document.createElement('div');
-            userDiv.className = 'message user-message';
-            userDiv.innerHTML = message;
-            userDiv.classList.add('animate');
-            chatMessages.appendChild(userDiv);
+            userDiv.className = 'message user-msg';
+            userDiv.innerHTML = message + '<div class="time">' + getTime() + '</div>';
+            messagesDiv.appendChild(userDiv);
             
             // Get bot response
-            let response = responses['default'];
+            let response = "💙 Main sun raha hoon. Jo bhi dil mein hai, share kar sakte ho. Koi judgment nahi, sirf pyaar. Main hoon na tere liye. 📞 WhatsApp: 8984473230";
             const lowerMsg = message.toLowerCase();
             
             for (let key in responses) {
@@ -241,18 +255,18 @@
             // Add bot message with delay
             setTimeout(() => {
                 const botDiv = document.createElement('div');
-                botDiv.className = 'message bot-message';
-                botDiv.innerHTML = response;
-                botDiv.classList.add('animate');
-                chatMessages.appendChild(botDiv);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
+                botDiv.className = 'message bot-msg';
+                botDiv.innerHTML = response + '<div class="time">' + getTime() + '</div>';
+                messagesDiv.appendChild(botDiv);
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
             }, 500);
             
-            // Clear input
+            // Clear input and scroll
             input.value = '';
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
         
+        // Enter key support
         document.getElementById('userInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 sendMessage();
